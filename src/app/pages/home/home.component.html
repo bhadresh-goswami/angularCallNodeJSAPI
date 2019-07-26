@@ -1,0 +1,73 @@
+<!-- 
+4 + 4
+<br>
+{{4+4}}
+<br><br>
+
+{{userObject}}
+<br>
+<br>
+{{userObject.userName}},
+{{userObject.emailid}},
+{{userObject.country}},
+{{userObject.gender}}
+
+<br><br>
+{{getUser() | json}}
+
+<br><br>
+{{currentDate }}
+<br>
+{{currentDate | date:'mediumDate'}}
+<br>
+{{currentDate | date:'fullDate'}}
+
+<br><br>
+
+{{salary|currency:'INR'}}
+
+<br><br>
+{{dec}}<br>
+{{dec | number:'2.3'}} -->
+
+
+
+
+<table class="table table-responsive">
+    <tr>
+        <td colspan="4">
+            Enter Search Text : <input type="text"
+            (change)="searchText()" id="searchtext" name="searchtext" [(ngModel)]="searchtext" class="form-control">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Country
+        </td>
+        <td>
+            Name
+        </td>
+        <td>
+            Gender
+        </td>
+        <td>
+            Email Id
+        </td>
+    </tr>
+    <tr *ngFor = "let user of filterArray">
+        <td>
+            {{user.country}}
+        </td>
+        <td>
+            {{user.userName}}
+        </td>
+        <td>
+            {{user.gender}}
+        </td>
+        <td>
+            {{user.emailid}}
+        </td>
+    </tr>
+</table>
+
+
